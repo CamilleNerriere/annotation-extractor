@@ -8,7 +8,6 @@ def get_text_annotations(doc):
         while annot:
             if annot.type[1] == "FreeText":
                 content = annot.info.get('content', '').strip()
-                print(content)
                 if content:
                     if page_num_count_from_1 in extracted_annotations:
                         extracted_annotations[page_num_count_from_1].append(content)

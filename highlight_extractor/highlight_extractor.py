@@ -42,6 +42,6 @@ def get_sorted_annotations(annotations):
     return extracted_sorted_annotations
 
 
-def get_hightlighted_annotations(doc):
+def get_highlighted_annotations(doc):
     annotations = get_annotations(doc)
     return get_sorted_annotations(annotations)
