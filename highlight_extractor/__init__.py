@@ -1,0 +1,1 @@
+from .highlight_extractor import get_hightlighted_annotations
