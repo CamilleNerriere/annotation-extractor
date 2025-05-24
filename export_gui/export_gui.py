@@ -7,51 +7,6 @@ from text_extractor import get_text_annotations
 from merge_annotations import merge_annotations
 from export_word import export_annotations_to_docx
 
-# def run_export_gui():
-#     def select_pdf():
-#         file_path = filedialog.askopenfilename(filetypes=[("PDF files", "*.pdf")])
-#         if file_path:
-#             pdf_path.set(file_path)
-#
-#     def select_output_path():
-#         file_path = filedialog.asksaveasfilename(defaultextension=".docx", filetypes=[("Word Document", "*.docx")])
-#         if file_path:
-#             output_path.set(file_path)
-#
-#     def run_export():
-#         if not pdf_path.get() or not output_path.get() or not title_entry.get():
-#             messagebox.showerror("Error", "Please, fill all the fields.")
-#             return
-#
-#         try:
-#             doc = fitz.open(pdf_path.get())
-#             highlighted_annotations = get_highlighted_annotations(doc)
-#             text_annotations = get_text_annotations(doc)
-#             all_annotations = merge_annotations(highlighted_annotations, text_annotations, doc)
-#
-#             export_annotations_to_docx(title_entry.get(), all_annotations, output_path.get())
-#             messagebox.showinfo("Succes", "Export completed.")
-#         except Exception as e:
-#             messagebox.showerror("Error", str(e))
-#
-#     # UI
-#     root = tk.Tk()
-#     root.title("Export PDF Annotations to Docx")
-#
-#     pdf_path = tk.StringVar()
-#     output_path = tk.StringVar()
-#
-#     tk.Button(root, text="Select pdf file", command=select_pdf).pack(pady=5)
-#     tk.Button(root, text="Choose directory to save docx file", command=select_output_path).pack(pady=5)
-#
-#     tk.Label(root, text="Document title :").pack()
-#     title_entry = tk.Entry(root, width=40)
-#     title_entry.pack(pady=5)
-#
-#     tk.Button(root, text="Export", command=run_export).pack(pady=10)
-#
-#     root.mainloop()
-
 def run_export_gui():
     def select_pdf():
         file_path = filedialog.askopenfilename(filetypes=[("PDF files", "*.pdf")])
